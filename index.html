@@ -68,7 +68,7 @@
     .popup {
       background: white;
       width: 90%;
-      max-width: 350px;
+      max-width: 450px;
       max-height: 70%;
       overflow-y: scroll;
       border-radius: 1em;
@@ -125,23 +125,45 @@
   <div class="overlay" id="popupOverlayMensch" onclick="hidePopupMensch(event)">
     <div class="popup" onclick="event.stopPropagation()">
       <h2 id="popupTitle">Mensch</h2>
-      <p id="popupText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio nam sequi distinctio? Neque nostrum voluptatum esse voluptatem fugiat, suscipit fugit debitis dolorem sequi illo reiciendis repellat magnam assumenda amet odio?</p>
+      <p id="popupText">Durch massive Eingriffe in die Natur löste der Mensch das ökologische Desaster des Aralsees direkt aus.</p>
+      <ul>
+        <li>Umleitung der Zuflüsse für Baumwollanbau <br> → Wasserentzug</li>
+        <li>Förderung von Monokulturen <br> → Bodenübernutzung</li>
+        <li>Vernachlässigung ökologischer Folgen <br>→ Ressourcenverschwendung</li>
+        <li>Verstaatlichung der Landwirtschaft <br>→ Zentralisierung der Kontrolle</li>
+        <li>Rückgang der Fischerei <br> → Erwerbsverlust</li>
+        <li>Umsiedlung der Bevölkerung <br>→ Zwangsmigration</li>
+      </ul>
       <button onclick="hidePopupMensch()">Zurück</button>
     </div>
   </div>
 
   <div class="overlay" id="popupOverlayBoden" onclick="hidePopupBoden(event)">
     <div class="popup" onclick="event.stopPropagation()">
-      <h2 id="popupTitle">Titel</h2>
-      <p id="popupText">Text</p>
+      <h2 id="popupTitle">Boden</h2>
+      <p id="popupText">Die Austrocknung des Sees führte zur Versalzung und Vergiftung der Böden, wodurch die Region dauerhaft landwirtschaftlich geschädigt wurde.</p>
+      <ul>
+        <li>Austrocknung des Seegrundes <br>→ Freilegung von Salzböden</li>
+        <li>Anreicherung von Pestiziden und Düngemitteln <br>→ Bodenvergiftung</li>
+        <li>Erosion durch fehlende Vegetation <br>→ Bodendegradation</li>
+        <li>Versalzung landwirtschaftlicher Flächen <br>→ Ertragsrückgang</li>
+        <li>Bildung von Sandstürmen <br>→ Bodenverwehung</li>
+      </ul>
       <button onclick="hidePopupBoden()">Zurück</button>
     </div>
   </div>
 
   <div class="overlay" id="popupOverlayWasser" onclick="hidePopupWasser(event)">
     <div class="popup" onclick="event.stopPropagation()">
-      <h2 id="popupTitle">Titel</h2>
-      <p id="popupText">Text</p>
+      <h2 id="popupTitle">Wasser</h2>
+      <p id="popupText">Der Aralsee verlor durch fehlenden Zufluss fast seine gesamte Wassermasse, was zur Zerstörung eines ehemals fruchtbaren Binnenmeeres führte.</p>
+      <ul>
+        <li>Sinkender Pegel <br>→ Flächenverlust</li>
+        <li>Teilung des Sees in Nord- und Südbecken <br>→ Gewässerfragmentierung</li>
+        <li>Erhöhung des Salzgehalts <br>→ Artensterben</li>
+        <li>Rückgang der Verdunstung <br>→ Klimaveränderung</li>
+        <li>Wassermangel für Anrainerstaaten <br>→ Konfliktpotenzial</li>
+      </ul>
       <button onclick="hidePopupWasser()">Zurück</button>
     </div>
   </div>
@@ -150,8 +172,16 @@
 
   <div class="overlay" id="popupOverlayKlima" onclick="hidePopupKlima(event)">
     <div class="popup" onclick="event.stopPropagation()">
-      <h2 id="popupTitle">Titel</h2>
-      <p id="popupText">Text</p>
+      <h2 id="popupTitle">Klima</h2>
+      <p id="popupText">Der Rückgang des Sees verändert das regionale Klima gravierend und macht das Leben in der Region deutlich extremer.</p>
+
+<ul>
+    <li>Verlust der kühlenden Wirkung des Sees <br> → Erwärmung der Region</li>
+    <li>Zunahme von Temperaturunterschieden <br> → Extremklima</li>
+    <li>Rückgang der Luftfeuchtigkeit <br> → Austrocknung</li>
+    <li>Verlagerung von Niederschlägen <br>→ Wüstenbildung</li>
+    <li>Entstehung von toxischen Staubwolken <br>→ Luftverschmutzung</li>
+</ul>
       <button onclick="hidePopupKlima()">Zurück</button>
     </div>
   </div>
@@ -204,5 +234,8 @@
 
 </body>
 </html>
+
+
+
 
 
