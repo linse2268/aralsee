@@ -67,9 +67,11 @@
 
     .popup {
       background: white;
-      border-radius: 20px;
       width: 90%;
       max-width: 350px;
+      max-height: 70%;
+      overflow-y: scroll;
+      border-radius: 1em;
       padding: 20px;
       box-shadow: 0 0 20px rgba(0,0,0,0.3);
       text-align: left;
@@ -114,30 +116,90 @@
   <p>Klick auf ein Element, um mehr zu erfahren:</p>
 
   <div class="circle-container">
-    <div class="card" onclick="showPopup('Mensch', 'Menschen leiteten Wasser um, um Baumwollfelder zu bewässern. Dadurch bekam der Aralsee kaum noch Nachschub.')">Mensch</div>
-    <div class="card" onclick="showPopup('Boden', 'Der Boden rund um den See versalzte. Wind verwehte Salz und Staub, was die Landwirtschaft erschwerte.')">Boden</div>
-    <div class="card" onclick="showPopup('Wasser', 'Der Wasserstand sank massiv. Der Aralsee schrumpfte auf ein Zehntel seiner ursprünglichen Fläche.')">Wasser</div>
-    <div class="card" onclick="showPopup('Klima', 'Ohne den See wurde das lokale Klima extremer – heiße Sommer, eisige Winter, weniger Feuchtigkeit.')">Klima</div>
+    <div class="card" onclick="showPopupMensch()">Mensch</div>
+    <div class="card" onclick="showPopupBoden()">Boden</div>
+    <div class="card" onclick="showPopupWasser()">Wasser</div>
+    <div class="card" onclick="showPopupKlima()">Klima</div>
   </div>
 
-  <div class="overlay" id="popupOverlay" onclick="hidePopup(event)">
+  <div class="overlay" id="popupOverlayMensch" onclick="hidePopupMensch(event)">
     <div class="popup" onclick="event.stopPropagation()">
-      <h2 id="popupTitle">Titel</h2>
-      <p id="popupText">Text</p>
-      <button onclick="hidePopup()">Zurück</button>
+      <h2 id="popupTitle">Mensch</h2>
+      <p id="popupText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio nam sequi distinctio? Neque nostrum voluptatum esse voluptatem fugiat, suscipit fugit debitis dolorem sequi illo reiciendis repellat magnam assumenda amet odio?</p>
+      <button onclick="hidePopupMensch()">Zurück</button>
     </div>
   </div>
 
+  <div class="overlay" id="popupOverlayBoden" onclick="hidePopupBoden(event)">
+    <div class="popup" onclick="event.stopPropagation()">
+      <h2 id="popupTitle">Titel</h2>
+      <p id="popupText">Text</p>
+      <button onclick="hidePopupBoden()">Zurück</button>
+    </div>
+  </div>
+
+  <div class="overlay" id="popupOverlayWasser" onclick="hidePopupWasser(event)">
+    <div class="popup" onclick="event.stopPropagation()">
+      <h2 id="popupTitle">Titel</h2>
+      <p id="popupText">Text</p>
+      <button onclick="hidePopupWasser()">Zurück</button>
+    </div>
+  </div>
+
+
+
+  <div class="overlay" id="popupOverlayKlima" onclick="hidePopupKlima(event)">
+    <div class="popup" onclick="event.stopPropagation()">
+      <h2 id="popupTitle">Titel</h2>
+      <p id="popupText">Text</p>
+      <button onclick="hidePopupKlima()">Zurück</button>
+    </div>
+  </div>
+
+
+
   <script>
-    function showPopup(title, text) {
-      document.getElementById('popupTitle').textContent = title;
-      document.getElementById('popupText').textContent = text;
-      document.getElementById('popupOverlay').classList.add('active');
+    function showPopupMensch() {
+      document.getElementById('popupOverlayMensch').classList.add('active');
     }
 
-    function hidePopup() {
-      document.getElementById('popupOverlay').classList.remove('active');
+    function hidePopupMensch() {
+      document.getElementById('popupOverlayMensch').classList.remove('active');
     }
+
+
+    
+
+    function showPopupBoden() {
+      document.getElementById('popupOverlayBoden').classList.add('active');
+    }
+
+    function hidePopupBoden() {
+      document.getElementById('popupOverlayBoden').classList.remove('active');
+    }
+
+
+    
+
+    function showPopupWasser() {
+      document.getElementById('popupOverlayWasser').classList.add('active');
+    }
+
+    function hidePopupWasser() {
+      document.getElementById('popupOverlayWasser').classList.remove('active');
+    }
+
+
+    
+
+    function showPopupKlima() {
+      document.getElementById('popupOverlayKlima').classList.add('active');
+    }
+
+    function hidePopupKlima() {
+      document.getElementById('popupOverlayKlima').classList.remove('active');
+    }
+
   </script>
 
 </body>
