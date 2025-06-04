@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wirkungsgefüge Aralsee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #eaf6fb;
+      margin: 0;
+      padding: 40px 10px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 1.8em;
+    }
+
+    .circle-container {
+      position: relative;
+      width: 80vw;
+      max-width: 400px;
+      aspect-ratio: 1 / 1;
+      margin: 40px auto;
+    }
+
+    .card {
+      position: absolute;
+      width: 25%;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      background: #3498db;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 0.9em;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    /* Dynamisch um Kreis angeordnet */
+    .card:nth-child(1) { top: 0%;    left: 37.5%; }
+    .card:nth-child(2) { top: 37.5%; left: 0%;    }
+    .card:nth-child(3) { bottom: 0%; left: 37.5%; }
+    .card:nth-child(4) { top: 37.5%; right: 0%;   }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .overlay.active {
+      display: flex;
+    }
+
+    .popup {
+      background: white;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 350px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      text-align: left;
+      animation: zoomIn 0.3s ease;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to   { transform: scale(1); opacity: 1; }
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #2c3e50;
+      font-size: 1.4em;
+    }
+
+    .popup p {
+      font-size: 1em;
+      line-height: 1.4;
+      color: #333;
+    }
+
+    .popup button {
+      margin-top: 15px;
+      padding: 8px 16px;
+      background: #3498db;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .popup button:hover {
+      background: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Wirkungsgefüge Aralsee</h1>
+  <p>Klick auf ein Element, um mehr zu erfahren:</p>
+
+  <div class="circle-container">
+    <div class="card" onclick="showPopup('Mensch', 'Menschen leiteten Wasser um, um Baumwollfelder zu bewässern. Dadurch bekam der Aralsee kaum noch Nachschub.')">Mensch</div>
+    <div class="card" onclick="showPopup('Boden', 'Der Boden rund um den See versalzte. Wind verwehte Salz und Staub, was die Landwirtschaft erschwerte.')">Boden</div>
+    <div class="card" onclick="showPopup('Wasser', 'Der Wasserstand sank massiv. Der Aralsee schrumpfte auf ein Zehntel seiner ursprünglichen Fläche.')">Wasser</div>
+    <div class="card" onclick="showPopup('Klima', 'Ohne den See wurde das lokale Klima extremer – heiße Sommer, eisige Winter, weniger Feuchtigkeit.')">Klima</div>
+  </div>
+
+  <div class="overlay" id="popupOverlay" onclick="hidePopup(event)">
+    <div class="popup" onclick="event.stopPropagation()">
+      <h2 id="popupTitle">Titel</h2>
+      <p id="popupText">Text</p>
+      <button onclick="hidePopup()">Zurück</button>
+    </div>
+  </div>
+
+  <script>
+    function showPopup(title, text) {
+      document.getElementById('popupTitle').textContent = title;
+      document.getElementById('popupText').textContent = text;
+      document.getElementById('popupOverlay').classList.add('active');
+    }
+
+    function hidePopup() {
+      document.getElementById('popupOverlay').classList.remove('active');
+    }
+  </script>
+
+</body>
+</html>
+
+
