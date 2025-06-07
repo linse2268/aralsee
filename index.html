@@ -6,8 +6,6 @@
   <title>Wirkungsgefüge Aralsee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-
-    
     body {
       font-family: sans-serif;
       background: #eaf6fb;
@@ -21,7 +19,9 @@
     }
 
     #header{
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://bilder.deutschlandfunk.de/FI/LE/_4/96/FILE_496d21209fc96eca8a482cc4a2cd1e31/108123322-jpg-100-1280x720.jpg);
+      width: 100%;
+      height: 100vh;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://bilder.deutschlandfunk.de/FI/LE/_4/96/FILE_496d21209fc96eca8a482cc4a2cd1e31/108123322-jpg-100-1280x720.jpg);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -37,12 +37,15 @@
 
 
     #uberschrift{
-      font-size: 8em;
+      font-size: 8vw;
+      width: 70vw;
+      text-align: wrap;
       color: white;
       position: relative;
       top: 0vh;
       animation-name: appear;
-      animation-duration: 1000ms;
+      animation-duration: 800ms;
+      animation-timing-function: ease-in;
     }
     @keyframes appear {
       from{top: 10vh; opacity: 0%;}
