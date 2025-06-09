@@ -1,16 +1,14 @@
-
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Wirkungsgefüge Aralsee</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0", viewport-fit=cover">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quellen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <style>
-    
-    body {
+    <style>
+        body {
       font-family: "Roboto", sans-serif;
       background: #eaf6fb;
       margin: 0;
@@ -19,413 +17,40 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-
-    h1 {
-      font-size: 1.8em;
-    }
-
-    #header{
-      width: 100%;
+      justify-content: space-between;
       height: 100vh;
-      padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
-      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://bilder.deutschlandfunk.de/FI/LE/_4/96/FILE_496d21209fc96eca8a482cc4a2cd1e31/108123322-jpg-100-1280x720.jpg);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-blend-mode: darken;
-      width: 100%;
-      height: 100vh;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-        scroll-snap-align: center;
+    }
+    ul{
+        text-align: left;
+        max-width: 80vw;
+        text-wrap: initial;
     }
 
-
-    #uberschrift{
-      font-size: 8vw;
-      width: 70vw;
-      text-align: wrap;
-      color: white;
-      position: relative;
-      top: 0vh;
-      animation-name: appear;
-      animation-duration: 500ms;
-      animation-timing-function: ease-in;
+    #zuruckLink{
+        padding: 2em 4em;
+        border-radius: 1em;
+        background-color: #3498db;
+        color: white;
+        font-weight: 900;
+        margin: 2em;
     }
-    
-
-    .circle-container {
-      position: relative;
-      width: 80vw;
-      max-width: 400px;
-      aspect-ratio: 1 / 1;
-      margin: 40px auto;
-    }
-
-    
-
-    .card {
-      position: absolute;
-      width: 25%;
-      aspect-ratio: 1 / 1;
-      border-radius: 50%;
-      background: #3498db;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      font-size: 0.9em;
-      font-weight: bold;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      transition: transform 0.1s;
-            box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.3);
-      animation: pulse 2s infinite;
-
-    }
-    .card:hover{
-      rotate: 360deg;
-    }
-
-    /* Dynamisch um Kreis angeordnet */
-    .card:nth-child(1) { top: 0%;    left: 37.5%; }
-    .card:nth-child(2) { top: 37.5%; left: 0%;    animation-delay: 750ms;}
-    .card:nth-child(3) { bottom: 0%; left: 37.5%; animation-delay: 500ms;}
-    .card:nth-child(4) { top: 37.5%; right: 0%;   animation-delay: 250ms;}
-
-    @keyframes pulse {
-      0%{scale: 1;}
-      50%{scale: 1.07;}
-      100%{scale:1;}
-    }
-
-    .overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0,0,0,0.4);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-    }
-
-    .overlay.active {
-      display: flex;
-    }
-
-    .popup {
-      background: white;
-      width: 80%;
-      max-width: 450px;
-      max-height: 70%;
-      overflow-y: scroll;
-      border-radius: 1em;
-      padding: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
-      text-align: left;
-      animation: zoomIn 0.3s ease;
-    }
-
-    @keyframes zoomIn {
-      from { transform: scale(0.8); opacity: 0; }
-      to   { transform: scale(1); opacity: 1; }
-    }
-
-    .popup h2 {
-      margin-top: 0;
-      color: #2c3e50;
-      font-size: 1.4em;
-    }
-
-    .popup p {
-      font-size: 1em;
-      line-height: 1.4;
-      color: #333;
-    }
-
-    .popup button {
-      margin-top: 15px;
-      padding: 8px 16px;
-      background: #3498db;
-      border: none;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    .popup button:hover {
-      background: #2980b9;
-    }
-
-    .fade-in {
-  opacity: 0;
-  transform: translateY(20vh);
-  transition: all 0.6s ease-out;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-#aralseegifDiv{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #2980b9;
-  padding: 1em;
-  border-radius: 2em;
-  max-width: 80%;
-  color: white;
-}
-#aralseegif{
-  border-radius: 1em;
-  max-width: 50%;
-}
-
-
-#aralseegifFaktenDiv{
-  width: 20vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.faktenDivDivfuerFakten{
-  margin: 1em;
-}
-.faktenDivDivfuerFakten h2{
-  margin: 0;
-  font-size: 2em;
-}
-.faktenDivDivfuerFakten p{
-  margin: 1em;
-  width: 60vw;
-}
-
-#einleitungssatz{
-  width: 50vw;
-  text-align: center;
-  font-size: 1.5em;
-  color: #2980b9;
-}
-  #sectionÜbersicht{
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-      scroll-snap-align: center;
-  }
-
-#sectionWirkungsgefüge{
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-    scroll-snap-align: center;
-}
-
-#quellenLink{
-  margin: 2em;
-  font-weight: 900;
-}
-
-@media (max-width: 768px) {
-  #aralseegifDiv{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  #aralseegif{
-    max-width: 100%;
-  }
-  #aralseegifFakten{
-  width: 90%;
-  font-size: 1em;
-}
-#einleitungssatz{
-  width: 90%;
-  text-align: center;
-  font-size: 1.1em;
-}
-}
-  </style>
+    </style>
 </head>
 <body>
-<div id="header">
-<h1 id="uberschrift" class="fade-in">Der Aralsee</h1>
-</div> 
-
-<div id="sectionÜbersicht">
-  <h3 id="einleitungssatz" class="fade-in">Der Aralsee war einst ein riesiges Binnenmeer – heute zählt er zu den größten vom Menschen verursachten <b>Umweltkatastrophen</b>. <br> Was ist passiert und welche Spuren hat dieser Wandel hinterlassen?</h3>
-
-<div id="aralseegifDiv" class="fade-in">
-    <img id="aralseegif" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Aralsee.gif" alt="">
-    <div id="aralseegifFaktenDiv">
-      <div class="faktenDivDivfuerFakten">
-        <p>Wasserpegel sinkt um über</p>
-      <h2><b>18m</b></h2>
-      </div>
-      <div class="faktenDivDivfuerFakten">
-        <p>Volumen sinkt von</p>
-      <h2><b>1040km<sup>3</sup></b></h2>
-      <p>auf weniger als</p>
-      <h2><b>180km<sup>3</sup></b></h2>
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-<div id="sectionWirkungsgefüge" class="fade-in">
-  <h3 id="einleitungssatz" class="fade-in">Das Wirkungsgefüge Aralsee:</h3>
-  <p style="margin: 0;" class="fade-in">Was passiert, wenn ein ganzer See fast verschwindet – und wie es dazu kam.</p>
-  <p style="margin-top: 0; color: rgba(0, 0, 0, 0.384);" class="fade-in">Tippe auf einen Kreis, um mehr zu erfahren.</p>
-  <div class="circle-container">
-    <div class="card fade-in" onclick="showPopupMensch()">Mensch</div>
-    <div class="card fade-in" onclick="showPopupBoden()">Boden</div>
-    <div class="card fade-in" onclick="showPopupWasser()">Wasser</div>
-    <div class="card fade-in" onclick="showPopupKlima()">Klima</div>
-  </div>
-</div>
-
-  <div class="overlay" id="popupOverlayMensch" onclick="hidePopupMensch(event)">
-    <div class="popup" onclick="event.stopPropagation()">
-      <h2 id="popupTitle">Mensch</h2>
-      <p id="popupText">Durch massive Eingriffe in die Natur löste der Mensch das ökologische Desaster des Aralsees direkt aus.</p>
-      <ul>
-        <li>Umleitung der Zuflüsse für Baumwollanbau <br> → Wasserentzug</li>
-        <li>Förderung von Monokulturen <br> → Bodenübernutzung</li>
-        <li>Vernachlässigung ökologischer Folgen <br>→ Ressourcenverschwendung</li>
-        <li>Verstaatlichung der Landwirtschaft <br>→ Zentralisierung der Kontrolle</li>
-        <li>Rückgang der Fischerei <br> → Erwerbsverlust</li>
-        <li>Umsiedlung der Bevölkerung <br>→ Zwangsmigration</li>
-      </ul>
-      <button onclick="hidePopupMensch()">Zurück</button>
-    </div>
-  </div>
-
-  <div class="overlay" id="popupOverlayBoden" onclick="hidePopupBoden(event)">
-    <div class="popup" onclick="event.stopPropagation()">
-      <h2 id="popupTitle">Boden</h2>
-      <p id="popupText">Die Austrocknung des Sees führte zur Versalzung und Vergiftung der Böden, wodurch die Region dauerhaft landwirtschaftlich geschädigt wurde.</p>
-      <ul>
-        <li>Austrocknung des Seegrundes <br>→ Freilegung von Salzböden</li>
-        <li>Anreicherung von Pestiziden und Düngemitteln <br>→ Bodenvergiftung</li>
-        <li>Erosion durch fehlende Vegetation <br>→ Bodendegradation</li>
-        <li>Versalzung landwirtschaftlicher Flächen <br>→ Ertragsrückgang</li>
-        <li>Bildung von Sandstürmen <br>→ Bodenverwehung</li>
-      </ul>
-      <button onclick="hidePopupBoden()">Zurück</button>
-    </div>
-  </div>
-
-  <div class="overlay" id="popupOverlayWasser" onclick="hidePopupWasser(event)">
-    <div class="popup" onclick="event.stopPropagation()">
-      <h2 id="popupTitle">Wasser</h2>
-      <p id="popupText">Der Aralsee verlor durch fehlenden Zufluss fast seine gesamte Wassermasse, was zur Zerstörung eines ehemals fruchtbaren Binnenmeeres führte.</p>
-      <ul>
-        <li>Sinkender Pegel <br>→ Flächenverlust</li>
-        <li>Teilung des Sees in Nord- und Südbecken <br>→ Gewässerfragmentierung</li>
-        <li>Erhöhung des Salzgehalts <br>→ Artensterben</li>
-        <li>Rückgang der Verdunstung <br>→ Klimaveränderung</li>
-        <li>Wassermangel für Anrainerstaaten <br>→ Konfliktpotenzial</li>
-      </ul>
-      <button onclick="hidePopupWasser()">Zurück</button>
-    </div>
-  </div>
-
-
-
-  <div class="overlay" id="popupOverlayKlima" onclick="hidePopupKlima(event)">
-    <div class="popup" onclick="event.stopPropagation()">
-      <h2 id="popupTitle">Klima</h2>
-      <p id="popupText">Der Rückgang des Sees verändert das regionale Klima gravierend und macht das Leben in der Region deutlich extremer.</p>
-
-<ul>
-    <li>Verlust der kühlenden Wirkung des Sees <br> → Erwärmung der Region</li>
-    <li>Zunahme von Temperaturunterschieden <br> → Extremklima</li>
-    <li>Rückgang der Luftfeuchtigkeit <br> → Austrocknung</li>
-    <li>Verlagerung von Niederschlägen <br>→ Wüstenbildung</li>
-    <li>Entstehung von toxischen Staubwolken <br>→ Luftverschmutzung</li>
+    <div>
+        <h1>Unsere Textquellen:</h1>
+    <ul id="quellenliste">
+    <li><a href="https://klassewasser.de/content/language1/html/3672.php">https://klassewasser.de/content/language1/html/3672.php</a></li>
+    <li><a href="https://static.klett.de/assets/terrasse/Infoblatt_Aralsee.pdf">https://static.klett.de/assets/terrasse/Infoblatt_Aralsee.pdf</a></li>
+    <li><a href="https://de.wikipedia.org/wiki/Aralsee">https://de.wikipedia.org/wiki/Aralsee</a></li>
+  </ul>
+  <h1>Unsere Bildquellen:</h1>
+  <ul>
+    <li><a href="https://upload.wikimedia.org/wikipedia/commons/9/9f/Aralsee.gif">https://upload.wikimedia.org/wikipedia/commons/9/9f/Aralsee.gif</a></li>
+    <li><a href="https://bilder.deutschlandfunk.de/FI/LE/_4/96/FILE_496d21209fc96eca8a482cc4a2cd1e31/108123322-jpg-100-1280x720.jpg">https://bilder.deutschlandfunk.de/FI/LE/_4/96/FILE_496d21209fc96eca8a482cc4a2cd1e31/108123322-jpg-100-1280x720.jpg</a></li>
 </ul>
-      <button onclick="hidePopupKlima()">Zurück</button>
     </div>
-  </div>
-
-<a id="quellenLink" href="quellen.html">Unsere Quellen -></a>
-
-
-
-
-  <script>
-    function showPopupMensch() {
-      document.getElementById('popupOverlayMensch').classList.add('active');
-    }
-
-    function hidePopupMensch() {
-      document.getElementById('popupOverlayMensch').classList.remove('active');
-    }
-
-
-    
-
-    function showPopupBoden() {
-      document.getElementById('popupOverlayBoden').classList.add('active');
-    }
-
-    function hidePopupBoden() {
-      document.getElementById('popupOverlayBoden').classList.remove('active');
-    }
-
-
-    
-
-    function showPopupWasser() {
-      document.getElementById('popupOverlayWasser').classList.add('active');
-    }
-
-    function hidePopupWasser() {
-      document.getElementById('popupOverlayWasser').classList.remove('active');
-    }
-
-
-    
-
-    function showPopupKlima() {
-      document.getElementById('popupOverlayKlima').classList.add('active');
-    }
-
-    function hidePopupKlima() {
-      document.getElementById('popupOverlayKlima').classList.remove('active');
-    }
-
-  </script>
-
-  <script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  });
-
-  document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
-</script>
-
+      <a id="zuruckLink" href="index.html">Zurück</a>
 
 </body>
 </html>
-
-
