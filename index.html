@@ -71,6 +71,8 @@
       margin: 40px auto;
     }
 
+    
+
     .card {
       position: absolute;
       width: 25%;
@@ -87,14 +89,24 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
       transition: transform 0.3s;
             box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.3);
+      animation: pulse 2s infinite;
 
+    }
+    .card:hover{
+      rotate: 360deg;
     }
 
     /* Dynamisch um Kreis angeordnet */
     .card:nth-child(1) { top: 0%;    left: 37.5%; }
-    .card:nth-child(2) { top: 37.5%; left: 0%;    }
-    .card:nth-child(3) { bottom: 0%; left: 37.5%; }
-    .card:nth-child(4) { top: 37.5%; right: 0%;   }
+    .card:nth-child(2) { top: 37.5%; left: 0%;    animation-delay: 750ms;}
+    .card:nth-child(3) { bottom: 0%; left: 37.5%; animation-delay: 500ms;}
+    .card:nth-child(4) { top: 37.5%; right: 0%;   animation-delay: 250ms;}
+
+    @keyframes pulse {
+      0%{scale: 1;}
+      50%{scale: 1.07;}
+      100%{scale:1;}
+    }
 
     .overlay {
       position: fixed;
@@ -253,20 +265,20 @@
 </div> 
 
 <div id="sectionÜbersicht">
-  <h3 id="einleitungssatz" class="fade-in">Der Aralsee war einst ein riesiges Binnenmeer – heute zählt er zu den größten vom Menschen verursachten Umweltkatastrophen. <br> Was ist passiert und welche Spuren hat dieser Wandel hinterlassen?</h3>
+  <h3 id="einleitungssatz" class="fade-in">Der Aralsee war einst ein riesiges Binnenmeer – heute zählt er zu den größten vom Menschen verursachten <b>Umweltkatastrophen</b>. <br> Was ist passiert und welche Spuren hat dieser Wandel hinterlassen?</h3>
 
 <div id="aralseegifDiv" class="fade-in">
     <img id="aralseegif" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Aralsee.gif" alt="">
     <div id="aralseegifFaktenDiv">
       <div class="faktenDivDivfuerFakten">
-        <p>Wasserpegel sinkt um</p>
-      <h2><b>8m</b></h2>
+        <p>Wasserpegel sinkt um über</p>
+      <h2><b>18m</b></h2>
       </div>
       <div class="faktenDivDivfuerFakten">
         <p>Volumen sinkt von</p>
       <h2><b>1040km<sup>3</sup></b></h2>
-      <p>auf</p>
-      <h2><b>181km<sup>3</sup></b></h2>
+      <p>auf weniger als</p>
+      <h2><b>180km<sup>3</sup></b></h2>
       </div>
       
     </div>
@@ -275,7 +287,8 @@
 
 <div id="sectionWirkungsgefüge">
   <h3 id="einleitungssatz">Das Wirkungsgefüge Aralsee:</h3>
-  <p>Was passiert, wenn ein ganzer See fast verschwindet – und wer die Verantwortung trägt.</p>
+  <p style="margin: 0;">Was passiert, wenn ein ganzer See fast verschwindet – und wer die Verantwortung trägt.</p>
+  <p style="margin-top: 0; color: rgba(0, 0, 0, 0.384);">Tippe auf einen Kreis, um mehr zu erfahren.</p>
   <div class="circle-container">
     <div class="card fade-in" onclick="showPopupMensch()">Mensch</div>
     <div class="card fade-in" onclick="showPopupBoden()">Boden</div>
