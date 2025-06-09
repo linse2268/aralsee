@@ -44,6 +44,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+        scroll-snap-align: center;
     }
 
 
@@ -58,10 +59,7 @@
       animation-duration: 500ms;
       animation-timing-function: ease-in;
     }
-    @keyframes appear {
-      from{top: 10vh; opacity: 0%;}
-      to{top: 0vh;}
-    }
+    
 
     .circle-container {
       position: relative;
@@ -179,7 +177,8 @@
 }
 #aralseegifDiv{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   background-color: #2980b9;
   padding: 1em;
   border-radius: 2em;
@@ -224,6 +223,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+      scroll-snap-align: center;
   }
 
 #sectionWirkungsgefüge{
@@ -232,6 +232,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+    scroll-snap-align: center;
 }
 
 #quellenLink{
@@ -262,7 +263,7 @@
 </head>
 <body>
 <div id="header">
-<h1 id="uberschrift">Der Aralsee</h1>
+<h1 id="uberschrift" class="fade-in">Der Aralsee</h1>
 </div> 
 
 <div id="sectionÜbersicht">
@@ -286,10 +287,10 @@
   </div>
 </div>
 
-<div id="sectionWirkungsgefüge">
-  <h3 id="einleitungssatz" >Das Wirkungsgefüge Aralsee:</h3>
-  <p style="margin: 0;">Was passiert, wenn ein ganzer See fast verschwindet – und wie es dazu kam.</p>
-  <p style="margin-top: 0; color: rgba(0, 0, 0, 0.384);">Tippe auf einen Kreis, um mehr zu erfahren.</p>
+<div id="sectionWirkungsgefüge" class="fade-in">
+  <h3 id="einleitungssatz" class="fade-in">Das Wirkungsgefüge Aralsee:</h3>
+  <p style="margin: 0;" class="fade-in">Was passiert, wenn ein ganzer See fast verschwindet – und wie es dazu kam.</p>
+  <p style="margin-top: 0; color: rgba(0, 0, 0, 0.384);" class="fade-in">Tippe auf einen Kreis, um mehr zu erfahren.</p>
   <div class="circle-container">
     <div class="card fade-in" onclick="showPopupMensch()">Mensch</div>
     <div class="card fade-in" onclick="showPopupBoden()">Boden</div>
@@ -426,5 +427,6 @@
 
 </body>
 </html>
+
 
 
