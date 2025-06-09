@@ -5,13 +5,20 @@
   <meta charset="UTF-8" />
   <title>Wirkungsgefüge Aralsee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <style>
+    
     body {
-      font-family: sans-serif;
+      font-family: "Roboto", sans-serif;
       background: #eaf6fb;
       margin: 0;
       padding: 0;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     h1 {
@@ -44,7 +51,7 @@
       position: relative;
       top: 0vh;
       animation-name: appear;
-      animation-duration: 800ms;
+      animation-duration: 500ms;
       animation-timing-function: ease-in;
     }
     @keyframes appear {
@@ -75,6 +82,8 @@
       font-weight: bold;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
       transition: transform 0.3s;
+            box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.3);
+
     }
 
     /* Dynamisch um Kreis angeordnet */
@@ -101,7 +110,7 @@
 
     .popup {
       background: white;
-      width: 90%;
+      width: 80%;
       max-width: 450px;
       max-height: 70%;
       overflow-y: scroll;
@@ -145,26 +154,110 @@
 
     .fade-in {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(20vh);
   transition: all 0.6s ease-out;
 }
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
+#aralseegifDiv{
+  display: flex;
+  justify-content: center;
+  background-color: #2980b9;
+  padding: 1em;
+  border-radius: 2em;
+  max-width: 80%;
+  color: white;
+}
+#aralseegif{
+  border-radius: 1em;
+  max-width: 50%;
+}
+
+
+#aralseegifFaktenDiv{
+  width: 20vw;
+}
+#aralseegifFaktenListe{
+  text-align: left;
+}
+
+#einleitungssatz{
+  width: 50vw;
+  text-align: center;
+  font-size: 1.5em;
+}
+  #sectionÜbersicht{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+#sectionWirkungsgefüge{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#quellenLink{
+  margin: 2em;
+  font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  #aralseegifDiv{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #aralseegif{
+    max-width: 100%;
+  }
+  #aralseegifFakten{
+  width: 90%;
+  font-size: 1em;
+}
+#einleitungssatz{
+  width: 90%;
+  text-align: center;
+  font-size: 1.1em;
+}
+}
   </style>
 </head>
 <body>
 <div id="header">
-<h1 id="uberschrift">Wirkungsgefüge Aralsee</h1>
+<h1 id="uberschrift">Der Aralsee</h1>
 </div> 
 
+<div id="sectionÜbersicht">
+  <h3 id="einleitungssatz" class="fade-in">Der Aralsee war einst ein riesiges Binnenmeer – heute zählt er zu den größten vom Menschen verursachten Umweltkatastrophen. <br> Was ist passiert und welche Spuren hat dieser Wandel hinterlassen?</h3>
+
+<div id="aralseegifDiv" class="fade-in">
+    <img id="aralseegif" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Aralsee.gif" alt="">
+    <div id="aralseegifFaktenDiv">
+      <ul id="aralseegifFaktenListe">
+        <li>Wasserpegel sinkt um <b>18m</b></li>
+        <li>Volumen sinkt von <b>1040km<sup>3</sup></b> auf <b>181km<sup>3</sup></b></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="sectionWirkungsgefüge">
+  <h3 id="einleitungssatz">Das Wirkungsgefüge Aralsee:</h3>
   <div class="circle-container">
     <div class="card fade-in" onclick="showPopupMensch()">Mensch</div>
     <div class="card fade-in" onclick="showPopupBoden()">Boden</div>
     <div class="card fade-in" onclick="showPopupWasser()">Wasser</div>
     <div class="card fade-in" onclick="showPopupKlima()">Klima</div>
   </div>
+</div>
 
   <div class="overlay" id="popupOverlayMensch" onclick="hidePopupMensch(event)">
     <div class="popup" onclick="event.stopPropagation()">
@@ -230,7 +323,7 @@
     </div>
   </div>
 
-
+<a id="quellenLink" href="quellen.html">Unsere Quellen -></a>
 
   <script>
     function showPopupMensch() {
