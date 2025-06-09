@@ -182,9 +182,18 @@
 
 #aralseegifFaktenDiv{
   width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-#aralseegifFaktenListe{
-  text-align: left;
+
+
+.faktenDivDivfuerFakten h2{
+  margin: 0;
+  font-size: 2em;
+}
+.faktenDivDivfuerFakten p{
+  margin: 1em;
 }
 
 #einleitungssatz{
@@ -245,10 +254,17 @@
 <div id="aralseegifDiv" class="fade-in">
     <img id="aralseegif" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Aralsee.gif" alt="">
     <div id="aralseegifFaktenDiv">
-      <ul id="aralseegifFaktenListe">
-        <li>Wasserpegel sinkt um <b>18m</b></li>
-        <li>Volumen sinkt von <b>1040km<sup>3</sup></b> auf <b>181km<sup>3</sup></b></li>
-      </ul>
+      <div class="faktenDivDivfuerFakten">
+        <p>Wasserpegel sinkt um</p>
+      <h2><b>8m</b></h2>
+      </div>
+      <div class="faktenDivDivfuerFakten">
+        <p>Volumen sinkt von</p>
+      <h2><b>1040km<sup>3</sup></b></h2>
+      <p>auf</p>
+      <h2><b>181km<sup>3</sup></b></h2>
+      </div>
+      
     </div>
   </div>
 </div>
